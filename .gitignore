@@ -1,0 +1,5 @@
+_build/
+*.swp
+*.un~
+*.beam
+.DS_Store
