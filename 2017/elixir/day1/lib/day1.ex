@@ -20,7 +20,6 @@ defmodule Day1 do
     {final_sum, _, _, _} = Enum.reduce(int_list, {0, 0, int_list, Enum.at(int_list, get_halfway_from_index(0, length(int_list)))}, fn(x, acc) -> 
       {sum, current_index, int_list, comp} = acc
       new_comp = Enum.at(int_list, get_halfway_from_index(current_index + 1, length(int_list)))
-      
       if x == comp do
         {sum + x, current_index + 1, int_list, new_comp}
       else 
@@ -40,9 +39,9 @@ defmodule Day1 do
     end
   end
 
-  defp convert_string_list_to_integer(str_list) do
-    str_list
-    |> String.graphemes
-    |> Enum.map(fn x -> String.to_integer(x) end)
+  defp convert_string_list_to_integer(str) do
+    str
+    |> String.codepoints()
+    |> Enum.map(&String.to_integer/1)
   end
 end
