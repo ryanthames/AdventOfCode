@@ -1,5 +1,11 @@
-_build/
-*.swp
+# Ignore Gradle project-specific cache directory
+.gradle
+
+# Ignore Gradle build output directory
+build
+
 *.un~
-*.beam
 .DS_Store
+*.beam
+.idea/
+out/

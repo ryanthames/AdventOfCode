@@ -1,0 +1,1 @@
+2019 Kotlin implementation design based on https://github.com/daafith/advent-of-code-2019
